@@ -1,6 +1,6 @@
 // Сервис-воркер справочника УК РФ: сохраняет приложение на телефоне для работы без интернета.
 // При каждом обновлении index.html меняйте VERSION, чтобы телефоны подхватили новую версию.
-const VERSION = "uk-rf-2.38-draft53";
+const VERSION = "uk-rf-2.50-draft65";
 const FILES = ["./", "./index.html", "./manifest.webmanifest", "./icon-192.png", "./icon-512.png",
   "./icon-maskable-512.png", "./apple-touch-icon.png", "./favicon-32.png"];
 
