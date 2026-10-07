@@ -304,7 +304,7 @@ summary::before{color:var(--gold)!important}
 
 const IC={"court": "<svg class=\"ic\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M3 9.5 12 4l9 5.5\"/><path d=\"M4 9.5h16\"/><path d=\"M6 9.5v8M10 9.5v8M14 9.5v8M18 9.5v8\"/><path d=\"M4 17.5h16\"/><path d=\"M3 20.5h18\"/></svg>", "codex": "<svg class=\"ic\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M5 18V6.5a2 2 0 0 1 2-2h11v13H7a2 2 0 0 0-2 2 2 2 0 0 0 2 2h11\"/><path d=\"M9.5 8.5h5\"/><path d=\"M9.5 11.5h3\"/></svg>", "bm": "<svg class=\"ic\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M7 4h10a1 1 0 0 1 1 1v15l-6-4-6 4V5a1 1 0 0 1 1-1z\"/></svg>", "bmf": "<svg class=\"ic\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M7 4h10a1 1 0 0 1 1 1v15l-6-4-6 4V5a1 1 0 0 1 1-1z\" fill=\"currentColor\"/></svg>", "table": "<svg class=\"ic\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" focusable=\"false\"><rect x=\"3.5\" y=\"5\" width=\"17\" height=\"14\" rx=\"2\"/><path d=\"M3.5 10h17\"/><path d=\"M10 10v9\"/></svg>", "scales": "<svg class=\"ic\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" focusable=\"false\"><circle cx=\"12\" cy=\"4.5\" r=\"1\"/><path d=\"M12 5.5V20\"/><path d=\"M8 20h8\"/><path d=\"M5 7.5h14\"/><path d=\"M2.5 14 5 7.5 7.5 14\"/><path d=\"M2.5 14a2.5 2.5 0 0 0 5 0z\"/><path d=\"M16.5 14 19 7.5l2.5 6.5\"/><path d=\"M16.5 14a2.5 2.5 0 0 0 5 0z\"/></svg>", "type": "<svg class=\"ic\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M3 19 8 6l5 13\"/><path d=\"M4.9 14.5h6.2\"/><circle cx=\"17.5\" cy=\"16.2\" r=\"2.7\"/><path d=\"M20.2 13v6\"/></svg>", "menu": "<svg class=\"ic\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M4 7h16M4 12h16M4 17h16\"/></svg>", "share": "<svg class=\"ic\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M12 3.5v11\"/><path d=\"M8 7.5l4-4 4 4\"/><path d=\"M5.5 12.5v5.5a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-5.5\"/></svg>", "x": "<svg class=\"ic\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M6.5 6.5l11 11M17.5 6.5l-11 11\"/></svg>", "left": "<svg class=\"ic\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M19 12H5\"/><path d=\"M11 6l-6 6 6 6\"/></svg>", "right": "<svg class=\"ic\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M5 12h14\"/><path d=\"M13 6l6 6-6 6\"/></svg>", "lock": "<svg class=\"ic\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" focusable=\"false\"><rect x=\"5\" y=\"11\" width=\"14\" height=\"9.5\" rx=\"2\"/><path d=\"M8 11V8a4 4 0 0 1 8 0v3\"/></svg>"};
 const EDITION = "ред. от 04.08.2026";
-const APP_VERSION = "2.50 (черновик 65)";
+const APP_VERSION = "2.51 (черновик 66)";
 const SOURCE = "https://www.consultant.ru/document/cons_doc_LAW_10699/";
 const T = s => s.split("|").map(x=>{const i=x.indexOf(" ");return {n:x.slice(0,i),t:x.slice(i+1)}});
 const CODE = [
@@ -6010,35 +6010,40 @@ function qzTT(t,inline){const m=t.match(/ст\.\s*(\d+(?:\.\d+)?)/i);if(!m)retur
 const BOOK=on=>`<svg class="bk${on?" on":""}" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 6.5C10.2 5.2 7.6 4.6 4 4.8v13.4c3.6-.2 6.2.4 8 1.7 1.8-1.3 4.4-1.9 8-1.7V4.8c-3.6-.2-6.2.4-8 1.7z" fill="${on?"currentColor":"none"}" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M12 6.5v13.4" stroke="${on?"var(--panel)":"currentColor"}" stroke-width="1.4"/></svg>`;
 const STG=["","Этап 1 — обычный","Этап 2 — только номера статей","Этап 3 — номера статей и время"];
 const STG_RULE=["","книжка за прохождение","книжка за 100%","книжка за 80% и выше, 1,5 минуты на вопрос"];
+const STG2=["","Этап 1 — обычный","Этап 2 — на время"];
+const STG2_RULE=["","книжка за прохождение","книжка за 80% и выше, 1 минута на вопрос"];
+const nsOf=z=>z.st2?3:z.grp==="Общая часть"?2:1;
+const stgName=(z,k)=>(nsOf(z)===3?STG:STG2)[k];
 const books=id=>store.get("uk-books-"+id,{});
+function migrateBooks(z){if(nsOf(z)!==2)return;const b=books(z.id);if(b.b1)return;const r=store.get("uk-quiz-"+z.id,null);if(r){b.b1=true;store.set("uk-books-"+z.id,b);if(!store.get(`uk-quiz-${z.id}-1`,null))store.set(`uk-quiz-${z.id}-1`,r)}}
 function openExam(){stopTimer();go("#exam");QZ=null;bar("exam");
  let pg="";const rows=QUIZ.map(z=>{const r=store.get("uk-quiz-"+z.id,null);const hd=z.grp!==pg?`<h3 class="qz-grp">${esc(z.grp)}</h3>`:"";pg=z.grp;
-  if(z.st2){const b=books(z.id);const st=[1,2,3].map(k=>{const rr=store.get(`uk-quiz-${z.id}-${k}`,null);const open=k===1||b["b"+(k-1)];
-   return `<div class="qz-st${open?"":" lock"}"><span class="qz-bk">${BOOK(b["b"+k])}</span><div><b>${STG[k]}</b><small>${STG_RULE[k]}${rr?` · последний результат: ${rr.s} из ${rr.n}`:""}</small></div>${open?`<button class="qz-btn${b["b"+k]?" ghost":""}" data-qz="${z.id}" data-st="${k}">${b["b"+k]?"Ещё раз":"Начать"}</button>`:`<span class="qz-lockt">${IC.lock} после книжки ${k-1}</span>`}</div>`}).join("");
-   return hd+`<div class="qz-card qz-card-st"><div class="qz-card-h"><b>${esc(z.title)}</b><span class="qz-bks">${[1,2,3].map(k=>BOOK(b["b"+k])).join("")}</span></div>${st}</div>`}
+  const ns=nsOf(z);if(ns>1){migrateBooks(z);const b=books(z.id);const KS=ns===3?[1,2,3]:[1,2];const SN=ns===3?STG:STG2,SR=ns===3?STG_RULE:STG2_RULE;const st=KS.map(k=>{const rr=store.get(`uk-quiz-${z.id}-${k}`,null);const open=k===1||b["b"+(k-1)];
+   return `<div class="qz-st${open?"":" lock"}"><span class="qz-bk">${BOOK(b["b"+k])}</span><div><b>${SN[k]}</b><small>${SR[k]}${rr?` · последний результат: ${rr.s} из ${rr.n}`:""}</small></div>${open?`<button class="qz-btn${b["b"+k]?" ghost":""}" data-qz="${z.id}" data-st="${k}">${b["b"+k]?"Ещё раз":"Начать"}</button>`:`<span class="qz-lockt">${IC.lock} после книжки ${k-1}</span>`}</div>`}).join("");
+   return hd+`<div class="qz-card qz-card-st"><div class="qz-card-h"><b>${esc(z.title)}</b><span class="qz-bks">${KS.map(k=>BOOK(b["b"+k])).join("")}</span></div>${st}</div>`}
   return hd+`<div class="qz-card"><div><b>${esc(z.title)}</b><small>${z.q.length} вопросов${r?` · последний результат: ${r.s} из ${r.n}`:""}</small></div><button class="qz-btn" data-qz="${z.id}">Начать</button></div>`}).join("");
  $("#doc").innerHTML=`<div class="crumbs">Подготовка</div><h1>Готовлюсь к экзамену</h1>
- <p class="qz-lead">Тесты по главам. После каждого ответа — объяснение со ссылкой на статью или Пленум, статью можно открыть, не выходя из теста. Общая часть покрыта полностью; по Особенной части пока есть тесты к главам 16, 21 и 23. У глав 16, 21 и 23 — три этапа с книжками: сначала обычный тест, потом только номера статей, потом номера статей на время.</p>${rows}`;
+ <p class="qz-lead">Тесты по главам. После каждого ответа — объяснение со ссылкой на статью или Пленум, статью можно открыть, не выходя из теста. Общая часть покрыта полностью; по Особенной части пока есть тесты к главам 16, 21 и 23. В Общей части — два этапа с книжками: обычный тест и тот же тест на время (1 минута на вопрос). У глав 16, 21 и 23 — три этапа: обычный тест, только номера статей, номера статей на время.</p>${rows}`;
  $("#doc").querySelectorAll("[data-qz]").forEach(b=>b.onclick=()=>startQuiz(b.dataset.qz,null,+(b.dataset.st||1)));
  $("#main").scrollTop=0}
 function startQuiz(id,only,stage){const z=QUIZ.find(x=>x.id===id);if(!z)return;stage=stage||1;
- const pool=stage===2?z.st2:stage===3?z.st3:z.q;
+ const ns=nsOf(z);const pool=ns===3&&stage===2?z.st2:ns===3&&stage===3?z.st3:z.q;
  const idx=only&&only.length?only:pool.map((_,i)=>i);
- QZ={z,pool,stage,bare:stage>1,timed:stage===3,order:shuf(idx),i:0,score:0,wrong:[],full:!(only&&only.length)};renderQ()}
+ QZ={z,ns,pool,stage,bare:ns===3&&stage>1,timed:stage>1&&stage===ns,T:ns===3?90:60,order:shuf(idx),i:0,score:0,wrong:[],full:!(only&&only.length)};renderQ()}
 let qzTimer=null;
 function stopTimer(){if(qzTimer){clearInterval(qzTimer);qzTimer=null}}
 function renderQ(){stopTimer();const {z,order,i}=QZ;const q=QZ.pool[order[i]];
  QZ.opts=shuf(q.o.map((t,k)=>({t,ok:k===q.a})));QZ.done=false;
  $("#doc").innerHTML=`<div class="crumbs"><a href="#exam" class="qz-back">${IC.left} Тесты</a> · ${esc(z.title)}</div>
- ${QZ.stage>1||z.st2?`<div class="qz-stage">${STG[QZ.stage]}</div>`:""}
- <div class="qz-top"><span>Вопрос ${i+1} из ${order.length}</span>${QZ.timed?`<span class="qz-time" id="qzTime">1:30</span>`:""}<span>Верно: ${QZ.score}</span></div>${QZ.timed?`<div class="qz-tbar"><i id="qzTbar"></i></div>`:""}
+ ${QZ.ns>1?`<div class="qz-stage">${stgName(z,QZ.stage)}</div>`:""}
+ <div class="qz-top"><span>Вопрос ${i+1} из ${order.length}</span>${QZ.timed?`<span class="qz-time" id="qzTime">${Math.floor(QZ.T/60)}:${String(QZ.T%60).padStart(2,"0")}</span>`:""}<span>Верно: ${QZ.score}</span></div>${QZ.timed?`<div class="qz-tbar"><i id="qzTbar"></i></div>`:""}
  <div class="qz-bar"><i style="width:${Math.round(i/order.length*100)}%"></i></div>
  <span class="chip">${QT[q.t]||""}</span><h2 class="qz-q">${esc(q.q)}</h2>
  <div class="qz-opts">${QZ.opts.map((o,k)=>`<button class="qz-opt" data-k="${k}"><b>${"АБВГ"[k]}</b><span>${esc(o.t)}${QZ.bare?"":qzTT(o.t)}</span></button>`).join("")}</div><div id="qzEx"></div>`;
  $("#doc").querySelector(".qz-back").onclick=e=>{e.preventDefault();openExam()};
  $("#doc").querySelectorAll(".qz-opt").forEach(b=>b.onclick=()=>answerQ(+b.dataset.k));
  $("#main").scrollTop=0;
- if(QZ.timed){const T=90,t0=Date.now();const tick=()=>{const left=Math.max(0,T-Math.floor((Date.now()-t0)/1000));const el=$("#qzTime"),bar=$("#qzTbar");if(!el){stopTimer();return}
+ if(QZ.timed){const T=QZ.T,t0=Date.now();const tick=()=>{const left=Math.max(0,T-Math.floor((Date.now()-t0)/1000));const el=$("#qzTime"),bar=$("#qzTbar");if(!el){stopTimer();return}
   el.textContent=`${Math.floor(left/60)}:${String(left%60).padStart(2,"0")}`;el.classList.toggle("low",left<=15);if(bar)bar.style.width=(left/T*100)+"%";
   if(left<=0){stopTimer();answerQ(-1)}};tick();qzTimer=setInterval(tick,500)}}
 function answerQ(k){if(QZ.done)return;QZ.done=true;stopTimer();const q=QZ.pool[QZ.order[QZ.i]];const ok=k>=0&&QZ.opts[k].ok;
@@ -6050,15 +6055,15 @@ function answerQ(k){if(QZ.done)return;QZ.done=true;stopTimer();const q=QZ.pool[Q
  if(a)$("#qzArt").onclick=()=>openSheet(q.art);
  $("#qzNext").onclick=()=>{if(last)finishQ();else{QZ.i++;renderQ()}};
  $("#qzEx").scrollIntoView({behavior:"smooth",block:"nearest"})}
-function finishQ(){stopTimer();const {z,score,order,wrong,stage}=QZ;const n=order.length;
+function finishQ(){stopTimer();const {z,score,order,wrong,stage,ns}=QZ;const n=order.length;
  const pct=Math.round(score/n*100);let award="";
- if(QZ.full){store.set(z.st2?`uk-quiz-${z.id}-${stage}`:"uk-quiz-"+z.id,{s:score,n,d:Date.now()});
-  if(z.st2){const b=books(z.id);const pass=stage===1||(stage===2&&score===n)||(stage===3&&pct>=80);
-   if(pass&&!b["b"+stage]){b["b"+stage]=true;store.set("uk-books-"+z.id,b);award=`<div class="qz-award">${BOOK(true)}<div><b>Получена книжка ${stage}!</b><small>${stage<3?`Открыт ${STG[stage+1].toLowerCase()}.`:"Все три книжки по этой главе собраны."}</small></div></div>`}
-   else if(!pass)award=`<div class="qz-award no">${BOOK(false)}<div><b>Книжка ${stage} пока не получена</b><small>Нужно ${stage===2?"100%":"80% и выше"} — у вас ${pct}%. Повторите ошибки и попробуйте снова.</small></div></div>`}}
+ if(QZ.full){store.set(ns>1?`uk-quiz-${z.id}-${stage}`:"uk-quiz-"+z.id,{s:score,n,d:Date.now()});
+  if(ns>1){const b=books(z.id);const need100=ns===3&&stage===2;const pass=stage===1||(need100&&score===n)||(!need100&&pct>=80);
+   if(pass&&!b["b"+stage]){b["b"+stage]=true;store.set("uk-books-"+z.id,b);award=`<div class="qz-award">${BOOK(true)}<div><b>Получена книжка ${stage}!</b><small>${stage<ns?`Открыт ${stgName(z,stage+1).toLowerCase()}.`:ns===3?"Все три книжки по этой главе собраны.":"Обе книжки по этому разделу собраны."}</small></div></div>`}
+   else if(!pass)award=`<div class="qz-award no">${BOOK(false)}<div><b>Книжка ${stage} пока не получена</b><small>Нужно ${need100?"100%":"80% и выше"} — у вас ${pct}%. Повторите ошибки и попробуйте снова.</small></div></div>`}}
  const list=wrong.map(i=>{const q=QZ.pool[i];return `<li><span>${esc(q.q)}</span><small>Правильно: ${esc(q.o[q.a])}${QZ.bare?"":qzTT(q.o[q.a],1)}</small><button class="qz-link" data-art="${q.art}">ст. ${q.art}</button></li>`}).join("");
  $("#doc").innerHTML=`<div class="crumbs"><a href="#exam" class="qz-back">${IC.left} Тесты</a> · ${esc(z.title)}</div>
- ${z.st2?`<div class="qz-stage">${STG[stage]}</div>`:""}<h1>Результат: ${score} из ${n}</h1><div class="qz-bar big"><i style="width:${pct}%"></i></div>${award}
+ ${ns>1?`<div class="qz-stage">${stgName(z,stage)}</div>`:""}<h1>Результат: ${score} из ${n}</h1><div class="qz-bar big"><i style="width:${pct}%"></i></div>${award}
  <p class="qz-lead">${pct===100?"Отлично — без ошибок.":pct>=80?"Хороший результат. Посмотрите вопросы с ошибками ниже.":"Стоит повторить статьи из вопросов с ошибками и пройти тест ещё раз."}</p>
  ${wrong.length?`<h3 class="qz-h">Ошибки</h3><ul class="qz-wrong">${list}</ul>`:""}
  <div class="qz-acts">${wrong.length?`<button class="qz-btn" id="qzRetryW">Повторить ошибки</button>`:""}<button class="qz-btn ${wrong.length?"ghost":""}" id="qzRetry">Пройти ещё раз</button><button class="qz-btn ghost" id="qzList">К списку тестов</button></div>`;
